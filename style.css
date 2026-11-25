@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body{background:#bcb0f7;padding:22px;color:#29263d}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.hidden{display:none!important}
+
+.dashboard{display:flex;min-height:calc(100vh - 44px);background:#fff;border-radius:25px;overflow:hidden}
+.sidebar{width:235px;flex-shrink:0;background:#f5f2ff;padding:30px 18px;display:flex;flex-direction:column}
+.logo{font-size:27px;color:#7658e8;margin:0 10px 42px;font-weight:800}
+.menu-title{font-size:10px;font-weight:700;color:#aaa4bc;margin:15px 12px}
+.sidebar nav{display:flex;flex-direction:column;gap:7px}
+.sidebar a{display:flex;align-items:center;gap:13px;text-decoration:none;color:#77738b;padding:13px;border-radius:11px;font-size:13px;font-weight:500}
+.sidebar a svg{width:18px;height:18px}
+.sidebar a.active,.sidebar a:hover{background:#8065ed;color:white}
+.bottom-menu{margin-top:auto}
+
+.main-content{flex:1;min-width:0;padding:32px;background:#fff}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;gap:15px}
+.topbar h1{font-size:25px}
+.topbar p{font-size:13px;color:#aaa6b7;margin-top:7px}
+.profile{border:0;background:#f6f3ff;padding:9px 13px;border-radius:30px;display:flex;align-items:center;gap:10px;font-weight:600}
+.avatar{background:#8065ed;color:white;width:34px;height:34px;border-radius:50%;display:grid;place-items:center}
+
+.summary-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:20px}
+.stat-card,.card{background:white;border:1px solid #eeeaf5;border-radius:18px;padding:22px;box-shadow:0 4px 15px #28205008;min-width:0}
+.stat-card{min-height:135px}
+.stat-card span{font-size:13px;color:#89849a}
+.stat-card h2{font-size:22px;margin:17px 0 8px;overflow-wrap:anywhere}
+.stat-card small{font-size:11px;color:#aaa}
+.stat-card.purple{background:#8065ed;color:white}
+.stat-card.purple span,.stat-card.purple small{color:#eee7ff}
+.green{color:#20a36b!important}.red{color:#e36b76!important}
+
+.content-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+.card{margin-bottom:18px}
+.card h3{font-size:16px;margin-bottom:18px}
+.card-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.card-heading h3{margin:0}
+.card-heading span,.muted{color:#999;font-size:12px}
+.text-btn{border:0;background:none;color:#8065ed;font-size:12px}
+.chart-wrap{height:220px;position:relative}
+.center{text-align:center;margin-top:10px}
+
+.transaction-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #f0edf5;font-size:13px;gap:10px}
+.transaction-row:last-child{border:0}
+.transaction-row small{display:block;color:#aaa;margin-top:5px;font-size:11px}
+.transaction-row strong{white-space:nowrap}
+.delete-btn{border:0;background:#fff0f0;color:#d44;padding:7px 10px;border-radius:8px}
+.goal{margin:18px 0}
+.goal-info{display:flex;justify-content:space-between;font-size:13px;margin-bottom:10px}
+.progress{height:10px;background:#eeeaf6;border-radius:20px;overflow:hidden;margin:10px 0}
+.progress div{height:100%;background:#8065ed;border-radius:20px}
+.goal small{color:#999;font-size:11px}
+
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+input,select{width:100%;padding:13px;border:1px solid #e6e1ef;border-radius:10px;background:#fff;color:#333;outline:none}
+input:focus,select:focus{border-color:#8065ed}
+.primary-btn,.secondary-btn{border:0;background:#8065ed;color:white;padding:13px 18px;border-radius:10px;font-weight:600}
+.primary-btn:hover{background:#684bd5}
+.secondary-btn{background:#eee9ff;color:#694bd4}
+.section-card{margin-top:20px}
+.wallet-card{background:#8065ed;color:white;padding:35px}
+.wallet-card h1{font-size:35px;margin:15px 0}
+.wallet-card p{color:#eee}
+.section-card p{margin:12px 0}
+.converter-card{max-width:550px}
+.converter-card label,.settings-card label{display:block;font-size:12px;color:#777;margin:18px 0 8px}
+.converter-card .primary-btn{width:100%;margin-top:18px}
+.converter-card h2{margin-top:22px;color:#7658e8;overflow-wrap:anywhere}
+.settings-card{max-width:550px}
+.settings-card input,.settings-card select{margin-bottom:5px}
+.settings-card button{display:block;width:100%;margin-top:15px}
+.auth-screen{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#bcb0f7,#eeeaff)}
+.auth-box{width:min(420px,100%);background:white;padding:35px;border-radius:22px;box-shadow:0 15px 50px #40307822}
+.auth-box h1{text-align:center;color:#7658e8;font-size:32px}
+.auth-box>p{text-align:center;color:#999;font-size:13px;margin:10px 0 25px}
+.auth-tabs{display:flex;background:#f4f0ff;padding:5px;border-radius:10px;margin-bottom:20px}
+.auth-tabs button{width:50%;border:0;padding:11px;border-radius:8px;background:transparent}
+.auth-tabs button.selected{background:#8065ed;color:white}
+.auth-box input{margin-bottom:13px}
+.auth-box .primary-btn{width:100%;margin-top:5px}
+.auth-box small{display:block;text-align:center;color:#aaa;margin-top:20px}
+.message{font-size:12px!important;color:#d44!important;margin:12px 0!important}
+.toast{position:fixed;bottom:25px;right:25px;background:#28243b;color:white;padding:14px 20px;border-radius:10px;display:none;z-index:10}
+
+body.dark{background:#171526;color:#eee}
+body.dark .dashboard,body.dark .main-content,body.dark .card,body.dark .stat-card{background:#242238;color:#eee;border-color:#38344e}
+body.dark .sidebar{background:#1e1b30}
+body.dark .sidebar a{color:#c5bfd8}
+body.dark .sidebar a.active,body.dark .sidebar a:hover{background:#8065ed;color:white}
+body.dark input,body.dark select{background:#302d45;color:white;border-color:#49445e}
+body.dark .profile{background:#302d45;color:white}
+body.dark .transaction-row{border-color:#38344e}
+
+@media(max-width:1100px){.summary-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:750px){
+body{padding:8px}.dashboard{flex-direction:column}
+.sidebar{width:100%;padding:15px}.logo{margin:0 5px 15px}
+.sidebar nav{flex-direction:row;flex-wrap:wrap}
+.sidebar a{padding:10px;font-size:12px}
+.bottom-menu{margin-top:12px}
+.main-content{padding:16px}
+.topbar{align-items:flex-start;flex-direction:column}
+.content-grid{grid-template-columns:1fr}
+}
+@media(max-width:450px){.summary-cards{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.stat-card h2{font-size:20px}}
